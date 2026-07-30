@@ -1,0 +1,177 @@
+:root {
+    --primary-color: #10b981;
+    --primary-hover-color: #059669;
+    --text-color: #1f2937;
+    --sub-text-color: #6b7280;
+    --bg-color: #f3f4f6;
+    --container-bg: #ffffff;
+    --border-color: #d1d5db;
+    --result-bg: #ecfdf5;
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.main-wrapper {
+    width: 100%;
+    max-width: 650px;
+}
+
+.calculator-container {
+    background: var(--container-bg);
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+}
+
+.calculator-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+h1 {
+    font-size: 26px;
+    margin-bottom: 5px;
+    color: var(--text-color);
+    font-weight: 700;
+}
+
+.subtitle {
+    font-size: 14px;
+    color: var(--sub-text-color);
+    margin: 0;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-row {
+    display: flex;
+    gap: 15px;
+}
+
+.form-group.half {
+    flex: 1;
+}
+
+.checkbox-row {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.checkbox-label input {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+label {
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 6px;
+    color: var(--text-color);
+}
+
+input[type="number"], select {
+    width: 100%;
+    padding: 11px 14px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 15px;
+    box-sizing: border-box;
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #fff;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.15);
+}
+
+.result-box {
+    margin-top: 25px;
+    background: var(--result-bg);
+    padding: 18px 20px;
+    border-radius: 10px;
+    border-left: 4px solid var(--primary-color);
+}
+
+.result-box h2 {
+    font-size: 17px;
+    margin-top: 0;
+    margin-bottom: 12px;
+    color: var(--primary-hover-color);
+}
+
+.result-item.netto {
+    display: flex;
+    justify-content: space-between;
+    font-size: 19px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: var(--text-color);
+}
+
+.result-item-details {
+    border-top: 1px solid rgba(0,0,0,0.06);
+    padding-top: 8px;
+}
+
+.result-item-details .small {
+    font-size: 13px;
+    color: var(--sub-text-color);
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+/* SEO Секция отдолу за Google */
+.seo-content {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.seo-content h2 {
+    font-size: 20px;
+    color: var(--text-color);
+    margin-top: 0;
+}
+
+.seo-content h3 {
+    font-size: 17px;
+    color: var(--text-color);
+    margin-top: 25px;
+}
+
+.faq-item h4 {
+    margin-bottom: 5px;
+    color: #374151;
+}
+
+.faq-item p {
+    margin-top: 0;
+    color: var(--sub-text-color);
+}
