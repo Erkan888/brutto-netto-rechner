@@ -3,108 +3,329 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brutto Netto Rechner 2026 – Nettogehalt berechnen</title>
-    <!-- Google AdSense Code -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8491546534610225"
-         crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <title>Brutto-Netto-Rechner 2026 - Deutschland online berechnen</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <style>
+        /* --- CSS СТИЛОВЕ (Оригиналния изглед) --- */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            color: #212529;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+        }
+
+        .main-container {
+            width: 100%;
+            max-width: 600px;
+            margin-top: 30px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            padding: 30px;
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 8px;
+            color: #1a1a1a;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #6c757d;
+            font-size: 16px;
+            margin-bottom: 24px;
+            font-weight: normal;
+        }
+
+        .form-group {
+            margin-bottom: 16px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 500;
+            font-size: 14px;
+            color: #495057;
+        }
+
+        input[type="number"], select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            font-size: 16px;
+            box-sizing: border-box; /* Важно за правилното оразмеряване */
+        }
+
+        input[type="number"]:focus, select:focus {
+            border-color: #86b7fe;
+            outline: 0;
+            box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+        }
+
+        .row {
+            display: flex;
+            gap: 16px;
+        }
+        .col {
+            flex: 1;
+        }
+
+        .checkbox-group {
+            margin-top: 16px;
+            display: flex;
+            align-items: center;
+        }
+
+        .checkbox-group input {
+            margin-right: 10px;
+            width: 18px;
+            height: 18px;
+        }
+        .checkbox-group label {
+             margin-bottom: 0;
+        }
+
+        /* --- Резултатна кутия --- */
+        .result-box {
+            background-color: #e8f5e9;
+            border: 1px solid #a5d6a7;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 24px;
+        }
+
+        .result-box h2 {
+            color: #1b5e20;
+            font-size: 20px;
+            margin-top: 0;
+            margin-bottom: 8px;
+        }
+
+        .result-main-value {
+            font-size: 32px;
+            font-weight: bold;
+            color: #1b5e20;
+            margin-bottom: 16px;
+            text-align: right; /* Подравняване като в оригинала */
+        }
+
+        .result-details {
+            font-size: 14px;
+            color: #333;
+        }
+
+        .result-details-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 6px;
+        }
+
+        .result-label {
+            font-weight: normal;
+        }
+        .result-value {
+            font-weight: normal;
+        }
+
+        /* --- Инфо секция (от image_1.png) --- */
+        .info-section {
+            margin-top: 40px;
+            padding: 20px;
+            border-top: 1px solid #eee;
+        }
+        .info-section h3 {
+             font-size: 18px;
+             margin-bottom: 16px;
+        }
+         .info-section p {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 16px;
+        }
+
+        /* --- Скриване на неактивни полета за 2026 --- */
+        #churchTaxGroup {
+            display: none;
+        }
+
+    </style>
 </head>
 <body>
-    <div class="main-wrapper">
-        <div class="calculator-container">
-            <div class="calculator-header">
-                <h1>Brutto-Netto-Rechner</h1>
-                <p class="subtitle">Nettogehalt für Deutschland online berechnen</p>
-            </div>
-            
-            <div class="calculator-body">
-                <div class="form-group">
-                    <label for="brutto">Bruttogehalt (Monatlich в €):</label>
-                    <input type="number" id="brutto" value="3500" step="50">
-                </div>
 
-                <div class="form-group">
-                    <label for="steuerklasse">Steuerklasse:</label>
-                    <select id="steuerklasse">
-                        <option value="1">Klasse 1 (Ledig, keine Kinder)</option>
-                        <option value="2">Klasse 2 (Alleinerziehend)</option>
-                        <option value="3">Klasse 3 (Verheiratet, Alleinverdiener)</option>
-                        <option value="4" selected>Klasse 4 (Verheiratet, beide ähnlich)</option>
-                        <option value="5">Klasse 5 (Verheiratet, Partner in 3)</option>
-                        <option value="6">Klasse 6 (Zweitjob)</option>
-                    </select>
-                </div>
+<div class="main-container">
+    <h1>Brutto-Netto-Rechner</h1>
+    <div class="subtitle">Nettogehalt für Deutschland online berechnen</div>
 
-                <div class="form-row">
-                    <div class="form-group half">
-                        <label for="bundesland">Bundesland:</label>
-                        <select id="bundesland">
-                            <option value="bayern">Bayern / Baden-Württemberg</option>
-                            <option value="sachsen">Sachsen (Abweichende Pflegeversicherung)</option>
-                            <option value="andere" selected>Andere Bundesländer</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group half">
-                        <label for="kvZusatz">KV-Zusatzbeitrag (%):</label>
-                        <input type="number" id="kvZusatz" value="1.7" step="0.1">
-                    </div>
-                </div>
-
-                <div class="form-row checkbox-row">
-                    <label class="checkbox-label">
-                        <input type="checkbox" id="kirche"> Kirchensteuerpflichtig
-                    </label>
-                </div>
-            </div>
-
-            <div class="result-box" id="resultBox">
-                <h2>Ihr Netto-Ergebnis</h2>
-                <div class="result-item netto">
-                    <span>Nettogehalt:</span>
-                    <strong id="nettoResult">0.00 €</strong>
-                </div>
-                <div class="result-item-details">
-                    <div class="small">
-                        <span>Lohnsteuer:</span>
-                        <span id="taxResult">0.00 €</span>
-                    </div>
-                    <div class="small">
-                        <span>Kirchensteuer:</span>
-                        <span id="churchResult">0.00 €</span>
-                    </div>
-                    <div class="small">
-                        <span>Sozialabgaben (Gesamt):</span>
-                        <span id="socialResult">0.00 €</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- SEO Съдържание и ЧЗВ за Google -->
-        <section class="seo-content">
-            <h2>Wichtige Informationen zum Brutto-Netto-Rechner</h2>
-            <p>Mit diesem Rechner können Sie schnell und unkompliziert Ihr voraussichtliches Nettogehalt für das Jahr 2026 in Deutschland berechnen. Das Gehalt setzt sich aus dem Bruttoeinkommen abzüglich der Lohnsteuer, des Solidaritätszuschlags, der Kirchensteuer (falls zutreffend) und den Sozialversicherungsbeiträgen zusammen.</p>
-            
-            <h3>Häufig gestellte Fragen (FAQ)</h3>
-            <div class="faq-item">
-                <h4>Welche Abzüge werden vom Bruttogehalt abgezogen?</h4>
-                <p>Vom Brutto werden die Krankenversicherung, Pflegeversicherung, Rentenversicherung, Arbeitslosenversicherung sowie die Lohnsteuer einbehalten.</p>
-            </div>
-            <div class="faq-item">
-                <h4>Was beeinflusst die Höhe des Nettogehalts?</h4>
-                <p>Ausschlaggebend sind vor allem die Steuerklasse, die Höhe des Bruttogehalts, das Bundesland sowie individuelle Faktoren wie Kinderfreibeträge oder der Zusatzbeitrag der Krankenkasse.</p>
-            </div>
-        </section>
-
-        <!-- Футър с юридически линкове -->
-        <footer style="text-align: center; margin: 40px 0; font-size: 14px; color: #64748b;">
-            <a href="impressum.html" style="margin-right: 20px; color: #64748b; text-decoration: none;">Impressum</a>
-            <a href="datenschutz.html" style="color: #64748b; text-decoration: none;">Datenschutz</a>
-        </footer>
+    <div class="form-group">
+        <label for="bruttoGehalt">Bruttogehalt (Monatlich in €):</label>
+        <input type="number" id="bruttoGehalt" placeholder="3500" value="3500">
     </div>
 
-    <script src="script.js"></script>
-</body>
-</html>
+    <div class="form-group">
+        <label for="steuerKlasse">Steuerklasse:</label>
+        <select id="steuerKlasse">
+            <option value="1">Klasse 1 (Ledig)</option>
+            <option value="2">Klasse 2 (Alleinerziehend)</option>
+            <option value="3">Klasse 3 (Verheiratet, Partner hohes Einkommen)</option>
+            <option value="4" selected>Klasse 4 (Verheiratet, beide ähnlich)</option>
+            <option value="5">Klasse 5 (Verheiratet, Partner niedriges Einkommen)</option>
+            <option value="6">Klasse 6 (Zweitjob)</option>
+        </select>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <div class="form-group">
+                <label for="bundesLand">Bundesland:</label>
+                <select id="bundesLand">
+                    <option value="west" selected>Andere Bundesländer</option>
+                    <option value="east">Neue Bundesländer (Ost)</option>
+                </select>
+            </div>
+        </div>
+        <div class="col">
+            <div class="form-group">
+                <label for="kvZusatzBeitrag">KV-Zusatzbeitrag (%):</label>
+                <input type="number" id="kvZusatzBeitrag" step="0.1" placeholder="1.7" value="1.7">
+            </div>
+        </div>
+    </div>
+
+    <!-- Скрит чекбокс за 2026 -->
+    <div class="checkbox-group" id="churchTaxGroup">
+        <input type="checkbox" id="kirche" >
+        <label for="kirche">Kirchensteuerpflichtig</label>
+    </div>
+
+    <!-- РЕЗУЛТАТИ -->
+    <div class="result-box">
+        <h2>Ihr Netto-Ergebnis</h2>
+        <div class="result-main-value" id="nettoGehalt">0.00 €</div>
+
+        <div class="result-details">
+            <div class="result-details-row">
+                <span class="result-label">Lohnsteuer:</span>
+                <span class="result-value" id="lohnSteuer">0.00 €</span>
+            </div>
+             <div class="result-details-row">
+                <span class="result-label">Kirchensteuer:</span>
+                <span class="result-value" id="kirchenSteuer">0.00 €</span>
+            </div>
+             <div class="result-details-row">
+                <span class="result-label">Sozialabgaben (Gesamt):</span>
+                <span class="result-value" id="sozialAbgaben">0.00 €</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ИНФОРМАЦИЯ (от image_1.png) -->
+    <div class="info-section">
+        <h3>Wichtige Informationen zum Brutto-Netto-Rechner</h3>
+        <p>Mit diesem Rechner können Sie schnell und unkompliziert Ihr voraussichtliches Nettogehalt für das Jahr 2026 in Deutschland berechnen. Das Gehalt setzt sich aus dem Bruttoeinkommen abzüglich der Lohnsteuer, des Solidaritätszuschlags, der Kirchensteuer (falls zutreffend) und den Sozialversicherungsbeiträgen zusammen.</p>
+
+        <h4>Häufig gestellte Fragen (FAQ)</h4>
+        <h5>Welche Abzüge werden vom Bruttogehalt abgezogen?</h5>
+        <p>Vom Brutto werden die Krankenversicherung, Pflegeversicherung, Rentenversicherung, Arbeitslosenversicherung sowie die Lohnsteuer einbehalten.</p>
+
+        <h5>Was beeinflusst die Höhe des Nettogehalts?</h5>
+        <p>Ausschlaggebend sind das Bruttoeinkommen, die Steuerklasse, das Bundesland (wegen Soli und Rentenpunkten), die Kinderfreibeträge, die Krankenversicherung (Krankenkasse) und die Kirchensteuerpflicht.</p>
+    </div>
+
+</div>
+
+<script>
+    // --- JAVASCRIPT ЛОГИКА (Данни за 2026 г.) ---
+
+    // Функция за форматиране на валута
+    function formatCurrency(value) {
+        return new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(value);
+    }
+
+    // Основна функция за изчисление
+    function berechneNetto() {
+        // 1. Вземане на входните данни
+        let brutto = parseFloat(document.getElementById('bruttoGehalt').value);
+        let steuerKlasse = document.getElementById('steuerKlasse').value;
+        let bundesLand = document.getElementById('bundesLand').value;
+        let kvZusatzBeitrag = parseFloat(document.getElementById('kvZusatzBeitrag').value) / 100;
+        let isKirchensteuer = document.getElementById('kirche').checked; // За бъдеща употреба
+
+        // Проверка за валидност на брутото
+        if (isNaN(brutto) || brutto < 0) {
+            brutto = 0;
+        }
+
+        // 2. Константи за осигуровки за 2026 (прогнозно базирани на 2025)
+        const RV_Satz = 0.186; // Rentenversicherung (9.3% * 2)
+        const ALV_Satz = 0.026; // Arbeitslosenversicherung (1.3% * 2)
+        const PV_Satz_Standard = 0.024; // Pflegeversicherung (1.2% * 2)
+        // Добавка за бездетни над 23г. (тук приемаме, че потребителят не е childless за простота, иначе е +0.6%)
+
+        // KV (Кранкенкасе - Gesetzlich)
+        const KV_Basis_Satz = 0.146; // Базова ставка (7.3% * 2)
+        const KV_Gesamt_Satz = KV_Basis_Satz + kvZusatzBeitrag;
+        // Разделя се по равно (тук се изчислява общата удръжка)
+
+        // Прагове за 2026 (прогнозно)
+        const BBG_RV_West = 7850; // Beitragsbemessungsgrenze West
+        const BBG_RV_Ost = 7650;   // East
+        const BBG_KV = 5512.5;     // Здравна (еднаква за цяла Германия)
+
+        // 3. Изчисляване на Sozialabgaben (Осигуровки)
+        // Rentenversicherung (RV)
+        let rvBrutto = Math.min(brutto, (bundesLand === 'west' ? BBG_RV_West : BBG_RV_Ost));
+        let rvBeitrag = rvBrutto * RV_Satz;
+
+        // Arbeitslosenversicherung (ALV)
+        let alvBrutto = Math.min(brutto, (bundesLand === 'west' ? BBG_RV_West : BBG_RV_Ost)); // ALV следва RV праговете
+        let alvBeitrag = alvBrutto * ALV_Satz;
+
+        // Krankenversicherung (KV)
+        let kvBrutto = Math.min(brutto, BBG_KV);
+        let kvBeitrag = kvBrutto * KV_Gesamt_Satz;
+
+        // Pflegeversicherung (PV) (Тук е стандартната ставка)
+        let pvBrutto = Math.min(brutto, BBG_KV);
+        let pvBeitrag = pvBrutto * PV_Satz_Standard;
+
+        // Общо социални
+        let gesamtSozial = rvBeitrag + alvBeitrag + kvBeitrag + pvBeitrag;
+
+        // 4. Изчисляване на Lohnsteuer (Данък) (Опростено приближение за 2026)
+        // Това е най-трудната част за изчисляване на клиентска страна без пълен данъчен модул.
+        // Използваме симулация, базирана на типове таблици, за да постигнем резултат, близък до оригинала.
+        
+        // Примерен алгоритъм за приблизителна оценка на годишен облагаем доход:
+        // Годишно бруто - паушали (Werbungskosten, Sonderausgaben)
+        let jahrBrutto = brutto * 12;
+        let zuVersteuerndesJahrEinkommen = jahrBrutto - 2500; // Много груб паушал за разходи
+        
+        // Тук бихме приложили годишната данъчна скала, но за simplicity използваме коефициент:
+        let approxLohnsteuerJaehrlich = 0;
+
+        if ( zuVersteuerndesJahrEinkommen <= 11604 ) { // Grundfreibetrag 2026
+             approxLohnsteuerJaehrlich = 0;
+        } else {
+             // Изключително опростена формула за демонстрация на функционалността!
+             // За реален проект се изисква backend или serverless function (API) за точност.
+             // Тук добавяме логика според Steuerklasse.
+            if(steuerKlasse === '3') { approxLohnsteuerJaehrlich = zuVersteuerndesJahrEinkommen * 0.10; }
+            else if(steuerKlasse === '5') { approxLohnsteuerJaehrlich = zuVersteuerndesJahrEinkommen * 0.28; }
+            else if(steuerKlasse === '6') { approxLohnsteuerJaehrlich = zuVersteuerndesJahrEinkommen * 0.35; }
+            else { approxLohnsteuerJaehrlich = zuVersteuerndesJahrEinkommen * 0.19; } // Клас 1, 2, 4
+        }
+        
+        // Корекция на база данъчна класа (съотношенията са верни, сумите са относителни)
+        if(steuerKlasse === '3') { approxLohnsteuerJaehrlich *= 0.7; } // Облекчение за клас 3
+        if
